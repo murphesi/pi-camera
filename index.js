@@ -7,15 +7,15 @@ class PiCamera {
     // Ensure config is an object
     config = config || {};
 
-    if (!config.mode) {
+    if (!config.capture) {
       throw new Error('PiCamera requires a mode to be created');
     }
     
     // Set the mode prop
-    this.mode = config.mode;
+    this.capture = config.capture;
 
     // Remove mode and set config
-    delete config.mode;
+    delete config.capture;
     this.config = config;
   }
 
@@ -41,7 +41,7 @@ class PiCamera {
 
   // Take a picture
   snap() {
-    if (this.mode !== 'photo') {
+    if (this.capture !== 'photo') {
       throw new Error(`snap() can only be called when Pi-Camera is in 'photo' mode`);
     }
     
@@ -50,7 +50,7 @@ class PiCamera {
 
   // Record a video
   record() {
-    if (this.mode !== 'video') {
+    if (this.capture !== 'video') {
       throw new Error(`record() can only be called when Pi-Camera is in 'video' mode`);
     }
 

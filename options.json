@@ -12,5 +12,16 @@
   "framerate",
   "rotation",
   "preview",
-  "opacity"
+  "opacity",
+  "awb",
+  "sharpness",
+  "brightness",
+  "contrast",
+  "saturation",
+  "ISO",
+  "exposure",
+  "drc",
+  "shutter",
+  "analoggain",
+  "mode"
 ]

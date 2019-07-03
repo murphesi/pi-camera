@@ -7,5 +7,6 @@
   "hflip",
   "vflip",
   "timestamp",
-  "datetime"
+  "datetime",
+  "stats"
 ]

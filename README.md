@@ -20,11 +20,24 @@ npm install pi-camera --save
 ```javascript
 const PiCamera = require('pi-camera');
 const myCamera = new PiCamera({
-  mode: 'photo',
-  output: `${ __dirname }/test.jpg`,
-  width: 640,
-  height: 480,
-  nopreview: true,
+  capture: 'photo',
+	output: `${ __dirname }/test.jpg`,
+	width: 3280,
+	height: 2464,
+	quality: 75,
+	raw: true,
+	nopreview: false,
+	awb: 'auto',
+	sharpness: 100,
+	brightness: 50,
+	ISO: 100,
+	saturation: 0,
+	contrast: 0,
+	drc: 'med',
+	shutter: 50000,
+	stats: true,
+	analoggain: 6.0,
+	mode: 3
 });
 
 myCamera.snap()
@@ -39,7 +52,7 @@ myCamera.snap()
 ```javascript
 const PiCamera = require('pi-camera');
 const myCamera = new PiCamera({
-  mode: 'video',
+  capture: 'video',
   output: `${ __dirname }/video.h264`,
   width: 1920,
   height: 1080,
